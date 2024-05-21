@@ -1,0 +1,303 @@
+/* Reseteo de márgenes y padding por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* Estilo del encabezado */
+header {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+}
+
+header .logo {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+header .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo de los botones */
+.blood-button {
+    position: relative;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background: #990000;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.blood-button::before,
+.blood-button::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #660000;
+    border-radius: 50%;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+}
+
+.blood-button::before {
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+}
+
+.blood-button::after {
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+}
+
+.blood-button:hover::before,
+.blood-button:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) scale(2.5);
+}
+
+.blood-button:hover::before {
+    left: -40px;
+}
+
+.blood-button:hover::after {
+    right: -40px;
+}
+
+.blood-button:hover {
+    background: #660000;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 1), 0 0 15px rgba(0, 0, 0, 1);
+}
+
+/* Estilo de las secciones */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo específico para la sección de historia */
+#story {
+    background: #1c1c1c;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+#story h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#story .resume {
+    text-align: justify;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+#story .resume::first-letter {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Características del juego */
+.features-carousel {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.features-carousel .feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Añade esta línea para centrar verticalmente */
+    text-align: center; /* Añade esta línea para centrar horizontalmente */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.features-carousel img {
+    max-width: 80%; /* Ajusta el tamaño de la imagen al 80% del contenedor */
+    margin-bottom: 20px;
+    display: block; /* Añade esta línea para centrar correctamente la imagen */
+    margin: 0 auto; /* Añade esta línea para centrar horizontalmente la imagen */
+}
+
+.features-carousel p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Galería */
+#gallery .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#gallery img {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* Testimonios */
+#reviews blockquote {
+    font-size: 1.5rem;
+    margin: 20px;
+    padding: 20px;
+    background: #333;
+    border-left: 5px solid #990000;
+}
+
+#reviews span {
+    font-size: 2rem;
+    color: #990000;
+}
+
+/* Equipo */
+#team .team-member {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+#team img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* Formulario de suscripción */
+#subscribe form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#subscribe label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#subscribe input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+}
+
+#subscribe button {
+    padding: 10px 20px;
+    border: none;
+    background: #990000;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#subscribe button:hover {
+    background: #660000;
+}
+
+/* Pie de página */
+footer {
+    background: #222;
+    padding: 20px;
+    text-align: center;
+    color: #aaa;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer nav ul li a:hover {
+    color: #990000;
+}
+
+footer .social a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+footer .social a:hover {
+    color: #990000;
+}
+
+

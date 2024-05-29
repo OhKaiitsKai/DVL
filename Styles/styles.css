@@ -231,6 +231,20 @@ section p {
     border-radius: 5px;
 }
 
+/* Trailer y Videos */
+#trailer .trailer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+}
+
+#trailer #t1 {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+}
+
 /* Testimonios */
 #reviews blockquote {
     font-size: 1.5rem;
